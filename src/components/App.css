@@ -1,0 +1,212 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+.wrapper {
+  width: 100%;
+  margin: auto;
+}
+.wrapper .popup {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+.wrapper .block {
+  height: 100%;
+  background: url(../shared/images/login-bg.jpg);
+  mix-blend-mode: normal;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 40px;
+}
+.wrapper .block .color {
+  background-color: rgba(92, 15, 128, 0.7);
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+}
+.wrapper .block .color h1 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: auto;
+  padding: 41px 0 20px 0;
+  margin: 0 12px 15px 12px;
+}
+.wrapper .block .color p {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin: auto;
+  margin: 0 12px 15px 12px;
+}
+.form {
+  padding: 0 10px;
+}
+.form h1 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+.form span {
+  font-size: 16px;
+  line-height: 19px;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+.form span label {
+  font-size: 12px;
+}
+.form input[type="text"] {
+  max-width: 403px;
+  height: 52px;
+  border: 2px solid #bdbdbd;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #000000;
+  width: 100%;
+}
+.form input[type="password"] {
+  max-width: 403px;
+  height: 52px;
+  border: 2px solid #bdbdbd;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #000000;
+  width: 100%;
+}
+/* .form input[type="text"]:focus {
+  outline: none;
+} */
+.form button {
+  background: #2d9cdb;
+  border-radius: 4px;
+  min-width: 188px;
+  min-height: 44px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  margin-top: 43px;
+  cursor: pointer;
+}
+.form .group {
+  margin: 6px 0 27px;
+}
+.box {
+  position: relative;
+  width: 50%;
+  float: left;
+}
+.radio {
+  position: relative;
+  top: 7px;
+  left: -15px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #bdbdbd;
+  background-color: #f2f2f2;
+  margin-top: 1.5px;
+  border-radius: 50%;
+  padding-bottom: 0 !important;
+  box-shadow: -1px -1px 1px 1px #ffffff inset, 1px 1px 1px 1px #ffffff inset;
+}
+
+/* When the checkbox is checked, add a blue background */
+.box input:checked ~ .radio {
+  background-color: #2d9cdb;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.box input:checked ~ .radio:after {
+  display: block;
+  left: -2px;
+  top: -2px;
+  width: 20px;
+  height: 20px;
+  background-color: #2d9cdb;
+  background-size: 100%;
+  z-index: 11;
+  border-radius: 50%;
+  border: 2px solid #2d9cdb;
+  box-shadow: -1px -1px 1px 1px #ffffff inset, 1px 1px 1px 1px #ffffff inset;
+}
+
+@media screen and (min-width: 586px) and (max-width: 761px) {
+  .wrapper .popup {
+    width: 100vw;
+    margin: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100vh;
+  }
+  .wrapper .block {
+    min-width: 50vw !important;
+
+  }
+}
+@media screen and (min-width: 586px) {
+  .dektop-form {
+    max-width: 290px;
+  }
+  .wrapper {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(161.5deg, #5a5096 54.5%, #ffffff 54.54%),
+      #ffffff;
+  }
+  .wrapper .popup {
+    position: absolute;
+    max-width: 760px;
+    max-height: 541px;
+    left: 50%;
+    margin-left: -380px;
+    top: 50%;
+    margin-top: -274px;
+    border-radius: 5px;
+    display: flex;
+    min-height: 548px;
+  }
+  .form input[type="text"] {
+    max-width: 403px;
+    height: 37px;
+  }
+  .form input[type="password"] {
+    max-width: 403px;
+    height: 37px;
+  }
+  .form h1 {
+    margin-bottom: 20px;
+  }
+  .form span {
+    line-height: 16px;
+    padding-bottom: 5px;
+  }
+  .wrapper .block .color p {
+    width: 262px;
+    margin: auto;
+  }
+  .wrapper .block .color h1 {
+    width: 262px;
+    margin: auto;
+    padding-top: 180px;
+  }
+  .wrapper .block {
+    min-width: 350px;
+    margin-bottom: 0;
+  }
+}

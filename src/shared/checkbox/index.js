@@ -1,0 +1,50 @@
+import React from 'react';
+
+
+
+const Checkbox = () => {  
+  
+  // console.log(checkboxValue)
+
+  const changeHangle =(e) => {
+    console.log(e.target.value)
+  }
+    return (
+        <>
+          <div className="group">
+                <span>Are you an agency or individual? <label></label></span>
+                {
+                  checkboxValue.map((checkbox, i)=>{
+                    return (
+                      <label className="box" key={i}>
+                        <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
+                        <span className="radio"></span>{checkbox.value}
+                      </label>
+                    )
+                  })
+                }
+                {/* <label className="box">
+                  <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
+                  <span className="radio"></span>Individual
+                </label>
+                <label className="box">
+                  <input type="radio" name="agency"/>
+                  <span className="radio" checked onChange={(e)=> changeHangle(e)}></span>Agency
+                </label> */}
+            </div>  
+        </>
+    )
+}
+export default Checkbox;
+
+
+const checkboxValue = [
+  {
+    id : 1,
+    value : "Individual"
+  },
+  {
+    id : 2,
+    value : "agency"
+  }
+]
