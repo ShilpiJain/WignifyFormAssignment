@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import InputField from "../shared/input-field";
 import Checkbox from "../shared/checkbox";
