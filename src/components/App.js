@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import InputField from "../shared/input-field";
 import Checkbox from "../shared/checkbox";
@@ -26,6 +26,7 @@ const App = () => {
             <h1 className="FW(B FS(24) LH(28) MB(30)">Create an account</h1>
             <form onSubmit={handleSubmit} noValidate>
               <InputField 
+                required={true}
                 type="text" 
                 name="email" 
                 title="Enter your email" 
@@ -34,14 +35,18 @@ const App = () => {
               <InputField 
                 type="text" 
                 name="name" 
+                required={false}
                 title="Enter your full name (Optional)"
                 errorMessage=" "
+                // onChange={handleChange}
                 />
               <InputField 
                   type="password" 
-                  name="password"  
+                  name="password" 
+                  required={true} 
                   title="Choose a strong password" 
                   errorMessage="Password must have a numeric value"
+                  // onChange={handleChange}
                  />
               <Checkbox/>
               <Button/>
