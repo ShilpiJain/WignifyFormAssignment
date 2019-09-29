@@ -199,10 +199,12 @@ padding-right: 10px;
   .wrapper .popup {
     max-width: 760px;
     max-height: 541px;
-    left: 50%;
+    
     margin-left: -380px;
-    top: 50%;
+    left: 50%;
     margin-top: -274px;
+    top: 50%;
+    
     display: flex;
     min-height: 548px;
   }

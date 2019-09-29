@@ -7,10 +7,10 @@
   height: 52px;
 }
 .error {
-  border: 2px solid #eb5757 !important;
+  border: 2px solid #E52424 !important;
 }
 .error ~ label {
-  background-color: #eb5757;
+  background-color: #E52424;
   color: #fff;
   font-size: 13px;
   line-height: 15px;
