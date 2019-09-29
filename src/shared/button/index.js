@@ -1,4 +1,5 @@
 import React from 'react'
+import "./style.css";
 
 const Button = () => {
     const submit= (e)=>{
@@ -6,7 +7,7 @@ const Button = () => {
       }
     return (
         <>
-            <button onSubmit={submit}>Submit</button>
+            <button className="FW(500) LH(20) MT(40) FS(18) C(W) C(p) BR(4) BC(blue)" onSubmit={submit}>Submit</button>
         </>
     )
 }

@@ -1,0 +1,19 @@
+.form button {
+  min-width: 188px;
+  min-height: 44px;
+}
+.FS\(18\){
+  font-size: 18px;
+}
+.MT\(40\){
+  margin-top: 40px
+}
+.C\(p\){
+  cursor: pointer;
+}
+.BR\(4\){
+  border-radius: 4px;
+}
+.BC\(blue\){
+  background-color: #1f83de;
+}

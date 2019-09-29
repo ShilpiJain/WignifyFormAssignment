@@ -1,61 +1,31 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import "./style.css";
-// import useForm from "../halper";
 
 const InputField = ({type, title, name}) => {
-  let errors = {};
-  const[ values, setValues ] = useState({email : "", Password : ""})
-  const[ error, setError ] = useState({message : ""})
-  const[ hasError, sethasError ] = useState(false)
 
- 
   const handleChange = e => {
-    debugger;
-    const {name, value} = e.target;
-    switch(name){
-      case 'email':
-        if(!value){
-          sethasError(true);
-        } else if(!/\S+@\S+\.\S+/.test(value)){
-          sethasError(true);
-        } 
-      case 'password':
-        if(!value){
-          sethasError(true);
-        } else if(value.length < 6){
-          sethasError(true);
-        }
-    }
-    setError({
-      ...error,
-      message : "password is invalid"
-    });
-
-    setValues({
-      ...values, 
-      [name]: value
-    });
+    console.log("handleChange");
   }
   const validate=(e)=>{
-    
+    console.log("validate");
   }
   const blurHandle = () =>{
-
+    console.log("blurHandle");
   }
   const focusHandle = () =>{
-
+    console.log("focusHandle");
   }
     return (
         <>
           {/* <form> */}
-            {/* {
+            {/* 
               inputValue.map(({id, name, title, errorM, type}, i) => { { {`${!sethasError ? "error" : " "}`}
                 return ( */}
-                    <div className="group">
-                      <span>{title}</span>
-                      <input type={type} name={name} id={name}  autoComplete="off"
+                    <div className="group MT(5) MR(0) MB(27) ML(0)">
+                      <span className="FS(16) LH(20) PB(5) D(IB)">{title}</span>
+                      <input className="W(100) FS(14) PLR(10) BSZ(BB) B(2Gr)" type={type} name={name} id={name} autoComplete="off"
                        onChange={handleChange} onBlur={blurHandle} onFocus={focusHandle}/>
-                      <label htmlFor={name} aria-labelledby={name}>{errors.message}</label>
+                      <label htmlFor={name} aria-labelledby={name}></label>
                     </div> 
                 {/* )
               })

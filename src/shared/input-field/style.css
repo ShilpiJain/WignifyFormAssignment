@@ -1,3 +1,11 @@
+.form input[type="text"] {
+  max-width: 403px;
+  height: 52px;
+}
+.form input[type="password"] {
+  max-width: 403px;
+  height: 52px;
+}
 .error {
   border: 2px solid #eb5757 !important;
 }
@@ -7,4 +15,15 @@
   font-size: 13px;
   line-height: 15px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 586px) {
+  .form input[type="text"] {
+    max-width: 403px;
+    height: 37px;
+  }
+  .form input[type="password"] {
+    max-width: 403px;
+    height: 37px;
+  }
 }

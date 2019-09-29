@@ -1,196 +1,210 @@
-.container {
+.Con {
   max-width: 400px;
   margin: auto;
 }
-.W\(100\){
+.W\(100\) {
   width: 100%;
+}
+.H\(100\) {
+  height: 100%;
 }
 .M\(a\) {
   margin: auto;
 }
-.BC\(W\){
+.BC\(W\) {
   background-color: #fff;
 }
-.wrapper .popup {
-  height: 100%;
-}
-.wrapper .block {
-  height: 100%;
-  background: url(../shared/images/login-bg.jpg);
-  mix-blend-mode: normal;
+.BS\(C\) {
   background-size: cover;
+}
+.BR\(N\) {
   background-repeat: no-repeat;
+}
+.BP\(C\) {
   background-position: center;
+}
+.MB\(40\) {
   margin-bottom: 40px;
 }
-.wrapper .block .color {
-  background-color: rgba(92, 15, 128, 0.7);
-  width: 100%;
-  height: 100%;
+.MH\(270\) {
   min-height: 270px;
 }
-.wrapper .block .color h1 {
+.BC\(purple\) {
+  background-color: rgba(92, 15, 128, 0.7);
+}
+.wrapper .block {
+  background-image: url(../shared/images/login-bg.jpg);
+}
+.FF\(Roboto\) {
   font-family: Roboto;
+}
+.FW\(B\) {
   font-weight: bold;
+}
+.FS\(34\) {
   font-size: 34px;
+}
+.LH\(40\) {
   line-height: 40px;
-  color: #ffffff;
-  margin: auto;
-  padding: 41px 0 20px 0;
-  margin: 0 12px 15px 12px;
 }
-.wrapper .block .color p {
-  font-family: Roboto;
+.C\(W\) {
+  color: #ffffff;
+}
+.PT\(40\) {
+  padding-top: 41px;
+}
+.PR\(0\) {
+  padding-right: 0;
+}
+.PB\(20\) {
+  padding-bottom: 20px;
+}
+.PL\(0\) {
+  padding-left: 0;
+}
+.MT\(0\) {
+  margin-top: 0;
+}
+.MR\(12\) {
+  margin-right: 12px;
+}
+.MB\(15\) {
+  margin-bottom: 15px;
+}
+.ML\(12\) {
+  margin-left: 12px;
+}
+.FW\(500\) {
   font-weight: 500;
+}
+.FS\(16\) {
   font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
-  margin: auto;
-  margin: 0 12px 15px 12px;
 }
-.form {
-  padding: 0 10px;
+.LH\(20\) {
+  line-height: 20px;
 }
-.form h1 {
-  font-family: Roboto;
-  font-weight: bold;
+.PR\(12\) {
+  padding-right: 12px;
+}
+.PB\(0\) {
+  padding-bottom: 0;
+}
+.PL\(0\) {
+  padding-left: 0;
+}
+.FS\(24\) {
   font-size: 24px;
+}
+.LH\(28\) {
   line-height: 28px;
+}
+.MB\(30\) {
   margin-bottom: 30px;
 }
-.form span {
+.MT\(5\) {
+  margin-top: 5px;
+}
+.MR\(0\) {
+  margin-right: 0;
+}
+.MB\(27\) {
+  margin-bottom: 27px;
+}
+.ML\(0\) {
+  margin-left: 0;
+}
+.FS\(\) {
   font-size: 16px;
-  line-height: 19px;
-  padding-bottom: 6px;
+}
+.PB\(5\) {
+  padding-bottom: 5px;
+}
+.D\(IB\) {
   display: inline-block;
 }
 .form span label {
   font-size: 12px;
 }
-.form input[type="text"] {
-  max-width: 403px;
-  height: 52px;
+.B\(2Gr\){
   border: 2px solid #bdbdbd;
+}
+.BSZ\(BB\){
   box-sizing: border-box;
-  padding: 0 10px;
+}
+.PLR\(10\){
+padding-left: 10px;
+padding-right: 10px;
+}
+.FS\(14\){
   font-size: 14px;
-  color: #000000;
-  width: 100%;
-}
-.form input[type="password"] {
-  max-width: 403px;
-  height: 52px;
-  border: 2px solid #bdbdbd;
-  box-sizing: border-box;
-  padding: 0 10px;
-  font-size: 14px;
-  color: #000000;
-  width: 100%;
-}
-/* .form input[type="text"]:focus {
-  outline: none;
-} */
-.form button {
-  background: #1f83de;
-  border-radius: 4px;
-  min-width: 188px;
-  min-height: 44px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
-  margin-top: 43px;
-  cursor: pointer;
-}
-.form .group {
-  margin: 6px 0 27px;
-}
-.box {
-  position: relative;
-  width: 50%;
-  float: left;
-}
-.radio {
-  position: relative;
-  top: 7px;
-  left: -15px;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #bdbdbd;
-  background-color: #f2f2f2;
-  margin-top: 1.5px;
-  border-radius: 50%;
-  padding-bottom: 0 !important;
-  box-shadow: -1px -1px 1px 1px #ffffff inset, 1px 1px 1px 1px #ffffff inset;
 }
 
-/* When the checkbox is checked, add a blue background */
-.box input:checked ~ .radio {
-  background-color: #2d9cdb;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.radio:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Show the checkmark when checked */
-.box input:checked ~ .radio:after {
-  display: block;
-  left: -2px;
-  top: -2px;
-  width: 20px;
-  height: 20px;
-  background-color: #2d9cdb;
-  background-size: 100%;
-  z-index: 11;
-  border-radius: 50%;
-  border: 2px solid #2d9cdb;
-  box-shadow: -1px -1px 1px 1px #ffffff inset, 1px 1px 1px 1px #ffffff inset;
-}
-
-@media screen and (min-width: 586px) and (max-width: 761px) {
-  .wrapper .popup {
-    width: 100vw;
-    margin: 0 !important;
-    left: 0 !important;
-    top: 0 !important;
-    height: 100vh;
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .PL\(20\)--sm{
+    padding-left: 20px;
   }
-  .wrapper .block {
-    min-width: 50vw !important;
-
+  .PR\(20\)--sm{
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 586px) and (max-width: 761px) {
+  .PL\(20\)--md{
+    padding-left: 20px;
+  }
+  .PR\(20\)--md{
+    padding-right: 20px;
+  }
+  .PL\(10\)--md{
+    padding-left: 10px;
+  }
+  .PR\(10\)--md{
+    padding-right: 10px;
+  }
+  .M\(0\)--md{
+    margin: 0 !important;
+  }
+  .L\(0\)--md{
+    left: 0 !important;
+  }
+  .T\(0\)--md{
+    top: 0 !important;
+  }
+  .W\(100vw\)--md{
+    width: 100vw; 
+  }
+  .H\(100vh\)--md{
+    height: 100vw; 
   }
 }
 @media screen and (min-width: 586px) {
   .dektop-form {
     max-width: 290px;
   }
-  .wrapper {
-    position: relative;
+  .H\(100vh\)--ld{
     height: 100vh;
+  }
+  .P\(r\)--ld{
+    position: relative;
+  }
+  .wrapper {
     background: linear-gradient(161.5deg, #5a5096 54.5%, #ffffff 54.54%),
       #ffffff;
   }
-  .wrapper .popup {
+  .P\(a\)--ld{
     position: absolute;
+  }
+  .BR\(5\)--ld{
+    border-radius: 5px;
+  }
+  .wrapper .popup {
     max-width: 760px;
     max-height: 541px;
     left: 50%;
     margin-left: -380px;
     top: 50%;
     margin-top: -274px;
-    border-radius: 5px;
     display: flex;
     min-height: 548px;
-  }
-  .form input[type="text"] {
-    max-width: 403px;
-    height: 37px;
-  }
-  .form input[type="password"] {
-    max-width: 403px;
-    height: 37px;
   }
   .form h1 {
     margin-bottom: 20px;

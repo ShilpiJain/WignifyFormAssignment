@@ -1,37 +1,27 @@
 import React from 'react';
-
-
+import "./style.css"
 
 const Checkbox = () => {  
-  
-  // console.log(checkboxValue)
-
   const changeHangle =(e) => {
     console.log(e.target.value)
   }
     return (
         <>
           <div className="group">
-                <span>Are you an agency or individual? <label></label></span>
-                {
-                  checkboxValue.map((checkbox, i)=>{
-                    return (
-                      <label className="box" key={i}>
-                        <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
-                        <span className="radio"></span>{checkbox.value}
-                      </label>
+            <span>Are you an agency or individual? <label></label></span>
+              {
+                checkboxValue.map((checkbox, i)=>{
+                  return (
+                    <div>
+                    <label className="box" key={i}>
+                      <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
+                      <span className="radio"></span>{checkbox.value}
+                    </label>
+                    </div>
                     )
-                  })
-                }
-                {/* <label className="box">
-                  <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
-                  <span className="radio"></span>Individual
-                </label>
-                <label className="box">
-                  <input type="radio" name="agency"/>
-                  <span className="radio" checked onChange={(e)=> changeHangle(e)}></span>Agency
-                </label> */}
-            </div>  
+                })
+              }
+          </div>  
         </>
     )
 }
@@ -45,6 +35,6 @@ const checkboxValue = [
   },
   {
     id : 2,
-    value : "agency"
+    value : "Agency"
   }
 ]
