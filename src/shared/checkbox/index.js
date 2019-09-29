@@ -12,12 +12,10 @@ const Checkbox = () => {
               {
                 checkboxValue.map((checkbox, i)=>{
                   return (
-                    <div>
                     <label className="box" key={i}>
                       <input type="radio" name="agency" onChange={(e)=> changeHangle(e)}/>
                       <span className="radio"></span>{checkbox.value}
                     </label>
-                    </div>
                     )
                 })
               }
