@@ -6,8 +6,10 @@ import Button from "../shared/button";
 
 const App = () => {
 
-  const handleSubmit= () => {
-    console.log("Handle Submit");
+  const handleSubmit= (e) => {
+    debugger;
+    e.preventDefault();
+    
   }
   
   return (
@@ -25,20 +27,28 @@ const App = () => {
           <div className="form PT(0) PB(0) PL(0) PL(10)--md PR(10)--md PL(20)--sm PR(20)--sm">
             <h1 className="FW(B FS(24) LH(28) MB(30)">Create an account</h1>
             <form onSubmit={handleSubmit} noValidate>
-              <InputField 
-                required={true}
-                type="text" 
-                name="email" 
-                title="Enter your email" 
-                errorMessage="Please add valid email address" 
-                />
-              <InputField 
+              {
+                InputValues.map((input, i)=>{
+                  return(
+                    <InputField 
+                    key={i}
+                    type={input.type} 
+                    name={input.name} 
+                    required={true}
+                    title={input.title}
+                    errorMessage={input.errorMessage} 
+                    />
+                  )
+                  
+                })
+              }
+              
+              {/* <InputField 
                 type="text" 
                 name="name" 
                 required={false}
                 title="Enter your full name (Optional)"
                 errorMessage=" "
-                // onChange={handleChange}
                 />
               <InputField 
                   type="password" 
@@ -46,8 +56,7 @@ const App = () => {
                   required={true} 
                   title="Choose a strong password" 
                   errorMessage="Password must have a numeric value"
-                  // onChange={handleChange}
-                 />
+                 /> */}
               <Checkbox/>
               <Button/>
             </form>
@@ -60,3 +69,26 @@ const App = () => {
 
 export default App;
 
+const InputValues = [
+  {
+    id : 1,
+    type: "text",
+    name : "email",
+    title: "Enter your email",
+    errorMessage: "Please add valid email address"
+  },
+  {
+    id : 2,
+    type: "text",
+    name : "name",
+    title: "Enter your full name (Optional)",
+    errorMessage: " "
+  },
+  {
+    id : 3,
+    type: "password",
+    name : "password",
+    title: "Enter your password",
+    errorMessage: "Password must have a numeric value"
+  }
+]
