@@ -6,13 +6,14 @@ import InputField from "../shared/input-field";
 import useForm from "../shared/halper";
 
 const App = () => {
-  const{handleSubmit} = useForm(Submit)
-  const Submit = () => {
-    console.log("submit done")
+  // const{handleInput, handleSubmit, value, Submit, validateLogin, errors} = useForm()
+  const handleSubmit= ()=>{
+    console.log("c");
   }
+  
   return (
-    <section className="wrapper">
-      <div className="popup">
+  <section className="wrapper W(100) M(a)">
+      <div className="popup W(100) BC(W)">
         <div className="block">
           <div className="color">
               <div className="container">

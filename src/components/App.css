@@ -2,14 +2,17 @@
   max-width: 400px;
   margin: auto;
 }
-.wrapper {
+.W\(100\){
   width: 100%;
+}
+.M\(a\) {
   margin: auto;
 }
+.BC\(W\){
+  background-color: #fff;
+}
 .wrapper .popup {
-  width: 100%;
   height: 100%;
-  background: #ffffff;
 }
 .wrapper .block {
   height: 100%;
@@ -88,7 +91,7 @@
   outline: none;
 } */
 .form button {
-  background: #2d9cdb;
+  background: #1f83de;
   border-radius: 4px;
   min-width: 188px;
   min-height: 44px;

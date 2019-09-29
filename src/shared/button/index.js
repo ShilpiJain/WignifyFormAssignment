@@ -1,9 +1,12 @@
 import React from 'react'
 
 const Button = () => {
+    const submit= (e)=>{
+        e.preventDefault();
+      }
     return (
         <>
-            <button>Submit</button>
+            <button onSubmit={submit}>Submit</button>
         </>
     )
 }
