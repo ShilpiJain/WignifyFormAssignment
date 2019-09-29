@@ -25,7 +25,7 @@ const InputField = ({type, title, name}) => {
                       <span className="FS(16) LH(20) PB(5) D(IB)">{title}</span>
                       <input className="W(100) FS(14) PLR(10) BSZ(BB) B(2Gr) error" type={type} name={name} id={name} autoComplete="off"
                        onChange={handleChange} onBlur={blurHandle} onFocus={focusHandle}/>
-                      <label htmlFor={name} title={name}>f</label>
+                      <label htmlFor={name} title={name} className="BR(3)">Pleas enter validate input</label>
                     </div> 
                 {/* )
               })

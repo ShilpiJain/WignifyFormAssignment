@@ -8,7 +8,7 @@ const Checkbox = () => {
     return (
         <>
           <div className="group">
-            <span>Are you an agency or individual? <label></label></span>
+            <div>Are you an agency or individual? <label>(Optional)</label></div>
               {
                 checkboxValue.map((checkbox, i)=>{
                   return (
