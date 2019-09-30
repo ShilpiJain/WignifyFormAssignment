@@ -24,7 +24,7 @@ const App = () => {
     }
     console.log("f" + isSubmit)
   }
-  
+ 
   return (
   <section className="wrapper W(100) M(a) P(r)--ld H(100vh)--ld">
       <div className="popup W(100) H(100) BC(W) T(0)--md L(0)--md M(0)--md H(100vh)--md W(100vw)--md P(a)--ld BR(5)--ld">
@@ -47,32 +47,15 @@ const App = () => {
                       key={i}
                       type={type} 
                       name={name} 
-                      required={isRequired}
-                      submit={isSubmit}
+                      required={required}
                       title={title}
-                      errorMessage={`${ submit ? '' : errorMessage}`} 
+                      errorMessage={`${ submit ? errorMessage : "" }`} 
                       />
                   )
-
                 })
               }
-              
-              {/* <InputField 
-                type="text" 
-                name="name" 
-                required={false}
-                title="Enter your full name (Optional)"
-                errorMessage=" "
-                />
-              <InputField 
-                  type="password" 
-                  name="password" 
-                  required={true} 
-                  title="Choose a strong password" 
-                  errorMessage="Password must have a numeric value"
-                 /> */}
               <Checkbox/>
-              <Button/>
+              <Button onSubmit={handleSubmit}/>
             </form>
           </div>
         </div>
