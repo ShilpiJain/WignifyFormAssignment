@@ -6,24 +6,19 @@ import Button from "../shared/button";
 
 const App = () => {
   const [isSubmit, setIsSubmit] = useState(true)
-  const [isRequired, setIsRequired] = useState(false)
   const [value, setvalue] = useState({email: "", name: "", password: ""})
 
-  const handleSubmit= (e) => {
-    debugger;
+  const handleSubmit= e => {
     e.preventDefault();
     let email = value.email;
-    let name = value.name;
     let password = value.password;
     if(email === "" && password === ""){
       setIsSubmit(false);
-      //setIsRequired(false);
-    }else{
+    } else {
       setIsSubmit(true);
-      //true
-      //setIsRequired(true);
+
     }
-    console.log("fd" + isSubmit)
+
   }
  
   return (
@@ -42,7 +37,7 @@ const App = () => {
             <h1 className="FW(B FS(24) LH(28) MB(30)">Create an account</h1>
             <form onSubmit={handleSubmit} noValidate>
               {
-                InputValues.map(({type, name, required, title, errorMessage, submit= Boolean}, i)=>{
+                InputValues.map(({type, name, required, title, errorMessage, submit= Boolean}, i) => {
                   return(
                     <InputField 
                       key={i}

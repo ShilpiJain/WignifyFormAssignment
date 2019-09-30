@@ -2,8 +2,7 @@ import React from 'react'
 import "./style.css";
 
 const Button = ({onSubmit}) => {
-    const submit= (e)=>{
-        console.log("submit");
+    const submit= e => {
         e.preventDefault();
       }
     return (
