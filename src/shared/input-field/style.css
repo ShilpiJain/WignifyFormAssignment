@@ -6,14 +6,15 @@
   max-width: 403px;
   height: 52px;
 }
+
 .error {
-  border: 2px solid #E52424 !important;
+  border: 2px solid #e52424 !important;
 }
-.error-message{
+.error-message {
   display: none;
 }
 .error ~ label {
-  background-color: #E52424;
+  background-color: #e52424;
   color: #fff;
   font-size: 13px;
   line-height: 15px;
@@ -21,7 +22,14 @@
   padding: 1.5px 7px;
   display: block;
 }
-.BR\(3\){
+#name {
+  border: 2px solid #bdbdbd !important;
+}
+#name ~ label {
+  border: none;
+  background-color: #fff;
+}
+.BR\(3\) {
   border-radius: 3px;
 }
 @media screen and (min-width: 586px) {

@@ -9,7 +9,12 @@ const App = () => {
   const handleSubmit= (e) => {
     debugger;
     e.preventDefault();
-    
+    let email = e.target.elements.email;
+    let name = e.target.elements.name;
+    let password = e.target.elements.password;
+    // let individual = e.target.elements.individual.checked;
+    // let agency = e.target.elements.agency.checked;
+    // console.log(email, name, password, individual, agency);
   }
   
   return (
@@ -31,15 +36,15 @@ const App = () => {
                 InputValues.map((input, i)=>{
                   return(
                     <InputField 
-                    key={i}
-                    type={input.type} 
-                    name={input.name} 
-                    required={true}
-                    title={input.title}
-                    errorMessage={input.errorMessage} 
-                    />
+                      key={i}
+                      type={input.type} 
+                      name={input.name} 
+                      required={input.required}
+                      title={input.title}
+                      errorMessage={input.errorMessage} 
+                      />
                   )
-                  
+
                 })
               }
               
@@ -75,20 +80,23 @@ const InputValues = [
     type: "text",
     name : "email",
     title: "Enter your email",
-    errorMessage: "Please add valid email address"
+    errorMessage: "Please add valid email address",
+    required : "true"
   },
   {
     id : 2,
     type: "text",
     name : "name",
     title: "Enter your full name (Optional)",
-    errorMessage: " "
+    errorMessage: " ",
+    required : "false"
   },
   {
     id : 3,
     type: "password",
     name : "password",
     title: "Enter your password",
-    errorMessage: "Password must have a numeric value"
+    errorMessage: "Password must have a numeric value",
+    required : "true"
   }
 ]
