@@ -1,15 +1,13 @@
 import React, {useState} from 'react'
 import "./style.css";
 
-const InputField = ({errorMessage, name, required, title, type}) => {
-  // console.log({type, title, name, onChange})
-  console.log({errorMessage, name, required, title, type})
+const InputField = ({errorMessage, name, required, title, type, isSubmit}) => {
 
+  console.log("dd"+isSubmit);
   const [isTouched, setTouched] = useState(false);
   const [inputValue, setValue] = useState("");
-  const [isValid, setValid] = useState(true); // default validation no needed
-  // const [optiaonal, setOptional] = useState(true); // default validation no needed
-  const [error, setError] = useState(false); // default validation no needed
+  const [isValid, setValid] = useState(true); 
+
 
   const handleChange = e => {
     debugger;
@@ -19,35 +17,48 @@ const InputField = ({errorMessage, name, required, title, type}) => {
     let name = e.target.name;
     let valLength = e.target.value.split("");
     if(name === "email" && val != "" && emailIsValid(val)){
-      setError(true);
       setValid(true);
+      setTouched(false);
     }else{
-      setError(false);
+      setValid(false);
+      setTouched(true);
+    }
+    if(name === "name"){
       setValid(false);
     }
-    if( name === "password" && val !== "" && valLength.length >= 8){
-      setError(true); // validated 
-      setValid(true); // validated 
+    if( name === "password" && val == Number && val !== "" && valLength.length >= 8){
+      setValid(true); 
+      setTouched(false);
     }else{
-      setError(false); // not validated
-      setValid(false); // not validated
+      setValid(false); 
+      setTouched(true);
     }
-    setTouched(true);
+
   }
 
   const emailIsValid = email => {
     debugger;
     return /\S+@\S+/.test(email);
   }
-  const onBlur= () => {
+
+
+  const onFocus= (e) => {
+    handleChange(e);
+    console.log("onFocus")
     setTouched(true);
+    if(name === "name"){
+      setValid(true);
+      setTouched(false);
+    }
+    if(isValid == true ){
+      setTouched(false);
+      console.log(isTouched);
+    }else {
+      setTouched(true);
+    }
   }
 
-  const onFocus= () => {
-    setTouched(true);
-  }
-
-  console.log("required :- " + required , "error :- " + error, "!isValid :- "+isValid, "isTouched :-" + isTouched);
+  console.log(" required:-" + required ," !isValid:-"+ !isValid, " isTouched:-" + isTouched, "setIsSubmit :- " + isSubmit );
     return (
         <>
           {/* <form> */}
@@ -57,8 +68,8 @@ const InputField = ({errorMessage, name, required, title, type}) => {
                    {"form-control user-mobile" + (((showError.phone && hasFocused.phone) || (isFocused.phone && showError.phone && loginDetails.phone.length === 10)) ? " error-border" : "")}*/   }
                     <div className="group MT(5) MR(0) MB(27) ML(0)">
                       <span className="FS(16) LH(20) PB(5) D(IB)">{title}</span>
-                      <input className={"W(100) FS(14) PLR(10) BSZ(BB) B(2Gr)" + (((required && error) || isTouched) && !isValid ? " error" : "")} type={type} name={name} id={name} autoComplete="off"
-                       onChange={handleChange} onBlur={onBlur}  onFocus={onFocus}  value={inputValue}/>
+                      <input className={"W(100) FS(14) PLR(10) BSZ(BB) B(2Gr)" + ((required || !isValid) && (isTouched || isSubmit) ? " error" : "")} type={type} name={name} id={name} autoComplete="off"
+                       onChange={handleChange}  onFocus={onFocus}  value={inputValue}/>
                       <label htmlFor={name} title={name} className="error-message BR(3)">{errorMessage}</label>
                     </div> 
                 {/* )

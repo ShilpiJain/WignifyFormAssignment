@@ -33,6 +33,6 @@ const checkboxValue = [
   },
   {
     id : 2,
-    value : " "
+    value : "agency"
   }
 ]

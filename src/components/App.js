@@ -5,16 +5,24 @@ import Checkbox from "../shared/checkbox";
 import Button from "../shared/button";
 
 const App = () => {
+  const [isSubmit, setIsSubmit] = useState(false)
+  const [isRequired, setIsRequired] = useState(false)
+  const [value, setvalue] = useState({email: "", name:"", password:""})
 
   const handleSubmit= (e) => {
     debugger;
     e.preventDefault();
-    let email = e.target.elements.email;
-    let name = e.target.elements.name;
-    let password = e.target.elements.password;
-    // let individual = e.target.elements.individual.checked;
-    // let agency = e.target.elements.agency.checked;
-    // console.log(email, name, password, individual, agency);
+    let email = value.email;
+    let name = value.name;
+    let password = value.password;
+    if(email == "", password == ""){
+      setIsSubmit(false);
+      setIsRequired(true);
+    }else{
+      setIsSubmit(true);
+      setIsRequired(false);
+    }
+    console.log("f" + isSubmit)
   }
   
   return (
@@ -33,15 +41,16 @@ const App = () => {
             <h1 className="FW(B FS(24) LH(28) MB(30)">Create an account</h1>
             <form onSubmit={handleSubmit} noValidate>
               {
-                InputValues.map((input, i)=>{
+                InputValues.map(({type, name, required, title, errorMessage, submit= Boolean}, i)=>{
                   return(
                     <InputField 
                       key={i}
-                      type={input.type} 
-                      name={input.name} 
-                      required={input.required}
-                      title={input.title}
-                      errorMessage={input.errorMessage} 
+                      type={type} 
+                      name={name} 
+                      required={isRequired}
+                      submit={isSubmit}
+                      title={title}
+                      errorMessage={`${ submit ? '' : errorMessage}`} 
                       />
                   )
 
