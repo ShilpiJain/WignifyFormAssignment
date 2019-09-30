@@ -5,9 +5,9 @@ import Checkbox from "../shared/checkbox";
 import Button from "../shared/button";
 
 const App = () => {
-  const [isSubmit, setIsSubmit] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(true)
   const [isRequired, setIsRequired] = useState(false)
-  const [value, setvalue] = useState({email: "", name:"", password:""})
+  const [value, setvalue] = useState({email: "", name: "", password: ""})
 
   const handleSubmit= (e) => {
     debugger;
@@ -15,14 +15,15 @@ const App = () => {
     let email = value.email;
     let name = value.name;
     let password = value.password;
-    if(email == "", password == ""){
+    if(email === "" && password === ""){
       setIsSubmit(false);
-      setIsRequired(true);
+      //setIsRequired(false);
     }else{
       setIsSubmit(true);
-      setIsRequired(false);
+      //true
+      //setIsRequired(true);
     }
-    console.log("f" + isSubmit)
+    console.log("fd" + isSubmit)
   }
  
   return (
@@ -47,6 +48,9 @@ const App = () => {
                       key={i}
                       type={type} 
                       name={name} 
+                      value={value}
+                      setvalue={setvalue}
+                      isSubmit={isSubmit}
                       required={required}
                       title={title}
                       errorMessage={`${ submit ? errorMessage : "" }`} 

@@ -1,8 +1,9 @@
 import React from 'react'
 import "./style.css";
 
-const Button = () => {
+const Button = ({onSubmit}) => {
     const submit= (e)=>{
+        console.log("submit");
         e.preventDefault();
       }
     return (
