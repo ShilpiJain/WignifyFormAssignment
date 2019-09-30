@@ -15,7 +15,7 @@
 .error-message {
   display: none;
 }
-.error ~ label {
+.error ~ span {
   background-color: #e52424;
   color: #fff;
   font-size: 13px;
@@ -27,7 +27,7 @@
 #name {
   border: 2px solid #bdbdbd !important;
 }
-#name ~ label {
+#name ~ span {
   border: none;
   background-color: #fff;
 }
