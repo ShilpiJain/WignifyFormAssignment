@@ -64,7 +64,7 @@ const InputField = ({errorMessage, name, required, title, type, isSubmit, setval
       <div className="group MT(5) MR(0) MB(27) ML(0)">
         <label  title={name} htmlFor={name} aria-label={name} className="FS(16) LH(20) PB(5) D(IB)">{title}</label>
         <input className={"W(100) FS(14) PLR(10) BSZ(BB) B(2Gr)" + ((required || isValid) && (isTouched || !isSubmit) ? " error" : "")} type={type} name={name} id={name} autoComplete="off"
-         onChange={handleChange}  onFocus={onFocus}/>
+         onChange={handleChange} onBlur={onFocus}/>
         <span className="error-message BR(3)">{errorMessage}</span>
       </div> 
     </>

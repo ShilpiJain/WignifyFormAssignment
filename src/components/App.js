@@ -6,7 +6,11 @@ import Button from "../shared/button";
 
 const App = () => {
   const [isSubmit, setIsSubmit] = useState(true)
-  const [value, setvalue] = useState({email: "", name: "", password: ""})
+  const [value, setvalue] = useState({
+    email : "", 
+    name : "",
+    password : ""
+  })
 
   const handleSubmit= e => {
     e.preventDefault();
@@ -72,7 +76,7 @@ const InputValues = [
     name : "email",
     title: "Enter your email",
     errorMessage: "Please add valid email address",
-    required : "true"
+    required : true
   },
   {
     id : 2,
@@ -80,7 +84,7 @@ const InputValues = [
     name : "name",
     title: "Enter your full name (Optional)",
     errorMessage: " ",
-    required : "false"
+    required : false
   },
   {
     id : 3,
@@ -88,6 +92,6 @@ const InputValues = [
     name : "password",
     title: "Enter your password",
     errorMessage: "Password must have a numeric value",
-    required : "true"
+    required : true
   }
 ]
